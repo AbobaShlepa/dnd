@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import type { Container } from "../types/container";
+import type { Container } from "../../types/container";
 
 const createStore = () => {
     const containers : Container[] = [

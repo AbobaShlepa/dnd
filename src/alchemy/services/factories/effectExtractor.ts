@@ -1,4 +1,4 @@
-import type Effect from "../../types/effect";
+import type Effect from "../../../types/effect";
 import type { Element } from "../../types/elements/element";
 import type Visitor from "../visitors/visitor";
 import { GetAcceptMethod } from "./visitorFactory";

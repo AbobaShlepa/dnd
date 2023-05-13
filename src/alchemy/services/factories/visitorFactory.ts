@@ -1,4 +1,4 @@
-import type Effect from "../../types/effect";
+import type Effect from "../../../types/effect";
 import Aether from "../../types/elements/aether";
 import Caelum from "../../types/elements/caelum";
 import type { Element } from "../../types/elements/element";

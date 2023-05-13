@@ -1,6 +1,6 @@
 <script lang="ts">
+    import Table from "../../shared/components/table.svelte";
     import { elementStore } from "../stores/elementStore";
-    import Table from "./table.svelte";
 
     const header = {
         name: 'Название',
