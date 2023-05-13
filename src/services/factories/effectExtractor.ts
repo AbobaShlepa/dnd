@@ -11,13 +11,14 @@ export function Extract(elements: Element[]): Effect[]
     }
 
     const result: Effect[] = [];
-    let element = elements[0];
+    let currentElement = elements[0];
 
     for (let i = 1; i < elements.length; i++)
     {
         const nextElement: Element = elements[i];
-        const acceptFunction: any = GetAcceptMethod(element, nextElement);
-        result.push(acceptFunction(element))
+        const acceptFunction: any = GetAcceptMethod(currentElement, nextElement);
+        result.push(acceptFunction(currentElement))
+        currentElement = nextElement;
     }
     return result;
 }
