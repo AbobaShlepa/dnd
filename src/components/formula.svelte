@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { containerStore } from "../stores/containerStore";
     import { elementStore } from "../stores/elementStore";
 
     const regex : RegExp = /[rhvakces]/i;
@@ -18,4 +17,4 @@
 </script>
 
 <h6>Алхимическая формула</h6>
-<input type="text" value={formula} on:input={handle} pattern="[rRhHvVaAKkCcEeSs]" maxlength="{$containerStore.selected.maxCapacity}">
+<input type="text" value={formula} on:input={handle} pattern="[rRhHvVaAKkCcEeSs]">
