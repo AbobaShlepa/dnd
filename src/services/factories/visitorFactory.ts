@@ -9,44 +9,44 @@ import Solon from "../../types/elements/solon";
 import Vermilion from "../../types/elements/vermilion";
 import Vitriol from "../../types/elements/vitriol";
 
-export function GetAcceptMethod(element: Element) : () => Effect
+export function GetAcceptMethod(element: Element, nextElement: Element) : () => Effect
 {
-    if (element instanceof Rebis)
+    if (nextElement instanceof Rebis)
     {
         return element.acceptRebis;
     }
 
-    if (element instanceof Hydragenum)
+    if (nextElement instanceof Hydragenum)
     {
         return element.acceptHydragenum;
     }
 
-    if (element instanceof Vitriol)
+    if (nextElement instanceof Vitriol)
     {
         return element.acceptVitriol;
     }
 
-    if (element instanceof Caelum)
+    if (nextElement instanceof Caelum)
     {
         return element.acceptCaelum;
     }
 
-    if (element instanceof Quebrith)
+    if (nextElement instanceof Quebrith)
     {
         return element.acceptQuebrith;
     }
 
-    if (element instanceof Vermilion)
+    if (nextElement instanceof Vermilion)
     {
         return element.acceptVermilion;
     }
 
-    if (element instanceof Aether)
+    if (nextElement instanceof Aether)
     {
         return element.acceptAether;
     }
 
-    if (element instanceof Solon)
+    if (nextElement instanceof Solon)
     {
         return element.acceptSolon;
     }
