@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import type Effect from "../../types/effect";
+import type Effect from "../types/effect";
 import type { Element } from "../types/elements/element"
 import { Parse } from "../services/factories/elementFactory";
 import { Extract } from "../services/factories/effectExtractor";

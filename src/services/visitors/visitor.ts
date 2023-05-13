@@ -1,4 +1,4 @@
-import type Effect from '../../../types/effect'
+import type Effect from '../../types/effect'
 import type Aether from '../../types/elements/aether'
 import type Caelum from '../../types/elements/caelum'
 import type Hydragenum from '../../types/elements/hydragenum'

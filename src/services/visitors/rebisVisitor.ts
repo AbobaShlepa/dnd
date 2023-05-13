@@ -1,4 +1,4 @@
-import type Effect from "../../../types/effect";
+import type Effect from "../../types/effect";
 import type Aether from "../../types/elements/aether";
 import type Caelum from "../../types/elements/caelum";
 import type Hydragenum from "../../types/elements/hydragenum";
@@ -9,37 +9,37 @@ import type Vermilion from "../../types/elements/vermilion";
 import type Vitriol from "../../types/elements/vitriol";
 import type Visitor from "./visitor";
 
-export class HydragenumVisitor implements Visitor {
+export class RebisVisitor implements Visitor {
 
     visitRebis(rebis: Rebis): Effect {
-        return rebis.acceptHydragenum();
+        return rebis.acceptRebis();
     }
 
     visitHydragenum(hydragenum: Hydragenum): Effect {
-        return hydragenum.acceptHydragenum();
+        return hydragenum.acceptRebis();
     }
 
     visitVitriol(vitriol: Vitriol): Effect {
-        return vitriol.acceptHydragenum();
+        return vitriol.acceptRebis();
     }
 
     visitCaelum(caelum: Caelum): Effect {
-        return caelum.acceptHydragenum();
+        return caelum.acceptRebis();
     }
 
     visitQuebrith(quebrith: Quebrith): Effect {
-        return quebrith.acceptHydragenum();
+        return quebrith.acceptRebis();
     }
 
     visitVermilion(vermilion: Vermilion): Effect {
-        return vermilion.acceptHydragenum();
+        return vermilion.acceptRebis();
     }
 
     visitAether(aether: Aether): Effect {
-        return aether.acceptHydragenum();
+        return aether.acceptRebis();
     }
 
     visitSolon(solon: Solon): Effect {
-        return solon.acceptHydragenum();
+        return solon.acceptRebis();
     }
 }
