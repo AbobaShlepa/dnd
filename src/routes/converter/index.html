@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="country" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="subscribe()">
+    <h1>Конвертер валют Психеи v0.1</h1>
+    <h3>Сколько получу в стране за эту деньгу</h3>
+
+    <table>
+        <tr>
+            <th>Статер</th>
+            <th>Гект</th>
+            <th>Гектор</th>
+            <th>Драхма Э</th>
+            <th>Тетрадрахма Э</th>
+            <th>Драхма М</th>
+            <th>Тетрадрахма М</th>
+            <th>Дария, М Динар</th>
+            <th>Дария,С Динар</th>
+            <th>Дария,З Динар</th>
+        </tr>
+        <tr>
+            <td id="1"></td>
+            <td id="2"></td>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+            <td id="6"></td>
+            <td id="7"></td>
+            <td id="8"></td>
+            <td id="9"></td>
+            <td id="10"></td>
+        </tr>
+    </table>
+
+    <div>
+        <label for="etos-stater">Этос, Статер</label>
+        <input name="country" type="radio" value="1" checked>
+    </div>
+
+    <div>
+        <label for="ioniya-gekt">Иония, Гект</label>
+        <input name="country" type="radio" value="2">
+    </div>
+
+    <div>
+        <label for="ioniya-gektor">Иония, Гектор</label>
+        <input name="country" type="radio" value="3">
+    </div>
+
+    <div>
+        <label for="eoliya-drahma">Эолия, Драхма</label>
+        <input name="country" type="radio" value="4">
+    </div>
+
+    <div>
+        <label for="eoliya-tedivadrahma">Эолия, Тетрадрахма</label>
+        <input name="country" type="radio" value="5">
+    </div>
+
+    <div>
+        <label for="miklidiya-drahma">Миклидия, Драхма</label>
+        <input name="country" type="radio" value="6">
+    </div>
+
+    <div>
+        <label for="miklidiya-tedivadrahma">Миклидия, Тетрадрахма</label>
+        <input name="country" type="radio" value="7">
+    </div>
+
+    <div>
+        <label for="settiya-sdinnar">Сеттия, Серебрянный Диннар</label>
+        <input name="country" type="radio" value="8">
+    </div>
+
+    <div>
+        <label for="dariya-mdinar">Дария, Медный Диннар</label>
+        <input name="country" type="radio" value="9">
+    </div>
+
+    <div>
+        <label for="dariya-sdinar">Дария, Серебрянный Диннар</label>
+        <input name="country" type="radio" value="10">
+    </div>
+
+    <div>
+        <label for="dariya-zdinar">Дария, Золотой Диннар</label>
+        <input name="country" type="radio" value="11">
+    </div>
+
+    <div>
+        <br>
+        <br>
+        <br>
+        <label for="cash">Введите количество деньги</label>
+        <br>
+        <input id="cash" name="cash" type="number" min="0" max="100000" oninput="calculate()">
+    </div>
+        
+</body>
+</html>
