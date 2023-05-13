@@ -5,7 +5,7 @@
 <h3>Психея</h3>
 <ul>
     <li>
-        <a href="./converter">Конвертер валют Психеи</a>
+        <a href="./psikheya/converter/index.html">Конвертер валют Психеи</a>
     </li>
     <li>
         <a href="./alchemy">Алхимия v0.1</a>
