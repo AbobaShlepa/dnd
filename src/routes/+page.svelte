@@ -1,5 +1,16 @@
 <script>
-    import Alchemy from "../components/alchemy.svelte";
 </script>
 
-<Alchemy />
+<h1>Привет, путник!</h1>
+<h2>Тут я буду делать всякие штуки для днд и не только.</h2>
+<h2>Пока что тут всё страшненько, но это пока. Потом будет хуже.</h2>
+
+<h3>Психея</h3>
+<ul>
+  <li>
+    <a href="./converter">Конвертер валют Психеи</a>
+  </li>
+  <li>
+    <a href="./alchemy">Алхимия v0.1</a>
+  </li>
+</ul>
