@@ -34,8 +34,7 @@
 
     let values: object[] = []
 
-    $: money && calculateV2(money, selectedCountry.toString())
-    $: selectedCountry && calculateV2(money, selectedCountry.toString())
+    $: money && selectedCountry && calculateV2(money, selectedCountry.toString())
 
     function calculateV2(money: number, selected: string) {
       console.log('triggered')
