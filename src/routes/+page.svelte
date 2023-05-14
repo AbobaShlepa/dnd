@@ -1,5 +1,5 @@
 <script>
-    import Main from "../components/main.svelte";
+    import Alchemy from "../components/alchemy.svelte";
 </script>
 
-<Main />
+<Alchemy />
