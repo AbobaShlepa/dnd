@@ -1,5 +1,3 @@
-import { QuebrithVisitor } from '../../services/visitors/quebrithVisitor'
-import type Visitor from '../../services/visitors/visitor'
 import type Effect from '../effect'
 
 export default class Hydragenum {
@@ -60,9 +58,5 @@ export default class Hydragenum {
             benifit: 'Обморожение восстанавливает вам здоровье вместо урона на 1d4 хода',
             downside: 'Уменьшает скорость перемещение на 10 фт на 1d4 хода'
         }
-    }
-
-    getVisitor(): Visitor {
-        return new QuebrithVisitor();
     }
 }

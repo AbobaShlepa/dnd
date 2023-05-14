@@ -1,5 +1,3 @@
-import { RebisVisitor } from '../../services/visitors/rebisVisitor'
-import type Visitor from '../../services/visitors/visitor'
 import type Effect from '../effect'
 
 export default class Rebis {
@@ -60,9 +58,5 @@ export default class Rebis {
             benifit: 'Останавливает кровотечение',
             downside: 'Наносит 1d4 урона'
         }
-    }
-
-    getVisitor(): Visitor {
-        return new RebisVisitor();
     }
 }

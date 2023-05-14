@@ -1,5 +1,3 @@
-import { AetherVisitor } from '../../services/visitors/aetherVisitor'
-import type Visitor from '../../services/visitors/visitor'
 import type Effect from '../effect'
 
 export default class Aether {
@@ -60,9 +58,5 @@ export default class Aether {
             benifit: 'Позволяет не поддерживать концентрацию на одном заклинании',
             downside: 'Любой ваш следующий бросок кидается с помехой'
         }
-    }
-
-    getVisitor(): Visitor {
-        return new AetherVisitor();
     }
 }

@@ -1,5 +1,3 @@
-import { QuebrithVisitor } from '../../services/visitors/quebrithVisitor'
-import type Visitor from '../../services/visitors/visitor'
 import type Effect from '../effect'
 
 export default class Quebrith {
@@ -60,9 +58,5 @@ export default class Quebrith {
             benifit: 'Вызывает кровотечение, наносящее 1d4 урона на 1d4 хода (стакается)',
             downside: 'Наносит 1d4 урона'
         }
-    }
-
-    getVisitor(): Visitor {
-        return new QuebrithVisitor();
     }
 }

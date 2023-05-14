@@ -1,5 +1,3 @@
-import type Visitor from '../../services/visitors/visitor'
-import { VitriolVisitor } from '../../services/visitors/vitriolVisitor'
 import type Effect from '../effect'
 
 export default class Vitriol {
@@ -60,10 +58,5 @@ export default class Vitriol {
             benifit: 'Наносимый по вам урон уменьшается на 1d4 на 1d4 хода',
             downside: 'Уменьшает скорость на 10фт на 1d4 ходов'
         }
-    }
-
-    
-    getVisitor(): Visitor {
-        return new VitriolVisitor();
     }
 }

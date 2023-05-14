@@ -1,5 +1,3 @@
-import { CaelumVisitor } from '../../services/visitors/caelumVisitor'
-import type Visitor from '../../services/visitors/visitor'
 import type Effect from '../effect'
 
 export default class Caelum {
@@ -60,9 +58,5 @@ export default class Caelum {
             benifit: 'Позволяет перемещаться дополнительный раз за ход на два хода',
             downside: 'Наносимый вами урон уменьшен на 1d4 на 1d4 хода'
         }
-    }
-
-    getVisitor(): Visitor {
-        return new CaelumVisitor();
     }
 }

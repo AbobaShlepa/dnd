@@ -1,5 +1,3 @@
-import { SolonVisitor } from '../../services/visitors/solonVisitor'
-import type Visitor from '../../services/visitors/visitor'
 import type Effect from '../effect'
 
 export default class Solon {
@@ -60,9 +58,5 @@ export default class Solon {
             benifit: 'Короткий отдых уменьшен вдвое',
             downside: 'Наносимый вами урон уменьшен на 1d4 до конца след боя'
         }
-    }
-
-    getVisitor(): Visitor {
-        return new SolonVisitor();
     }
 }

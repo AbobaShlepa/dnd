@@ -1,5 +1,3 @@
-import { VermilionVisitor } from '../../services/visitors/vermilionVisitor'
-import type Visitor from '../../services/visitors/visitor'
 import type Effect from '../effect'
 
 export default class Vermilion {
@@ -60,9 +58,5 @@ export default class Vermilion {
             benifit: 'Эффект наносит доп. физический урон (+25%)',
             downside: 'Наносит 1d8 урона'
         }
-    }
-    
-    getVisitor(): Visitor {
-        return new VermilionVisitor();
     }
 }
