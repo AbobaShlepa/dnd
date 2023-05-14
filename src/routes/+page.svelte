@@ -96,12 +96,12 @@
       <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
     </div>
     <div class="col-6 col-md">
-      <h5>Features</h5>
+      <h5>Технологии</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="#">Cool stuff</a></li>
-        <li><a class="link-secondary" href="#">Random feature</a></li>
-        <li><a class="link-secondary" href="#">Team feature</a></li>
-        <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+        <li><a class="link-secondary" href="#">Svelte</a></li>
+        <li><a class="link-secondary" href="#">Github Pages</a></li>
+        <li><a class="link-secondary" href="#">Typescipt</a></li>
+        <li><a class="link-secondary" href="#">Bootstrap</a></li>
         <li><a class="link-secondary" href="#">Another one</a></li>
         <li><a class="link-secondary" href="#">Last time</a></li>
       </ul>
@@ -204,11 +204,5 @@
     .flex-md-equal > * {
       flex: 1;
     }
-  }
-
-  .img-fit {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
   }
 </style>
