@@ -1,20 +1,22 @@
 <script lang="ts">
     import { elementStore } from "../stores/elementStore";
 
-    const regex : RegExp = /[rhvakces]/i;
+    const pattern = 'rhvakcesRHVAKCES';
+    const allowedChars = Array.from(pattern).map(value => value.charCodeAt(0));
 
     let formula: string = '';
 
     function handle(event: any) {
         const input: string = event?.target?.value as string;
-        if (!regex.test(input))
-        {
-            event.target.value = input.slice(0, -1);
-        }
-       
         elementStore.updateElements(input);
     }   
+
+    function validate(event: any) {
+        if (!allowedChars.includes(event.charCode)){
+            event.preventDefault();
+        } 
+    }
 </script>
 
 <h6>Алхимическая формула</h6>
-<input type="text" value={formula} on:input={handle} pattern="[rRhHvVaAKkCcEeSs]">
+<input type="text" value={formula} on:input={handle} on:keypress={validate}>
