@@ -54,12 +54,11 @@
         class="bg-light shadow-sm mx-auto"
         src="./alchemy.jpg"
         alt="Конвертер валют"
-        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" />
+        style="height: 300px; border-radius: 21px 21px 0 0;" />
       </a>
     </div>
     <div
-      class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
-    >
+      class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 p-3">
         <h2 class="display-5">Психея</h2>
         <p class="lead">Конвертер валют.</p>
@@ -69,7 +68,7 @@
         class="bg-dark shadow-sm mx-auto"
         src="./converter.jpg"
         alt="Алхимия"
-        style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" />
+        style="height: 300px; border-radius: 21px 21px 0 0;" />
       </a>
   </div>
 </main>
