@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Ingredient } from "../types/ingredient";
+    import type { Ingredient } from "../types/alchemy/ingredient";
 
     export let items : Ingredient[];
     export let selectedItem: number;

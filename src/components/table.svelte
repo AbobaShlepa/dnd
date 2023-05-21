@@ -2,6 +2,7 @@
     export let header: any;
     export let data: object[] = [];
     export let styles: string[] = [];
+    export let selector = (item: any): any => item;
 
     const getStyle = (index: number) => {
         if (styles.length < index) {
@@ -23,14 +24,13 @@
             {#each Object.values(data) as row}
                 <tr>
                     {#each Object.values(row) as cell, index}
-                        <td class={getStyle(index)}>{cell}</td>
+                        <td class={getStyle(index)}>{selector(cell)}</td>
                     {/each}
                 </tr>
             {/each}
         </tbody>
     </table>
 {/if}
-.
 
 <style>
     table.table-fit {

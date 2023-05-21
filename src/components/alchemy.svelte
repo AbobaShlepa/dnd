@@ -1,5 +1,7 @@
 <script lang="ts">
     import type { PotionBase } from "../types/potionBase";
+    import IngredientList from "./alchemy/ingredientList.svelte";
+    import RecieptHelper from "./alchemy/recieptHelper.svelte";
     import BaseSelector from "./baseSelector.svelte";
     import ContainerSelector from "./containerSelector.svelte";
     import Formula from "./formula.svelte";
@@ -16,7 +18,7 @@
 <div class="modal-body row">
     <div class="col-md-5">
         <ContainerSelector />
-        <BaseSelector bind:base={base} />
+        <BaseSelector bind:base />
         <PotionContainer />
         <Receipt />
         <Formula />
@@ -25,6 +27,12 @@
         <Result />
     </div>
     <div class="col-md-2">
-      <Legend />
+        <Legend />
     </div>
-  </div>
+</div>
+<div class="modal-body row">
+    <div class="col-md-5">
+        <RecieptHelper />
+        <IngredientList />
+    </div>
+</div>
