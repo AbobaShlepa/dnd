@@ -9,6 +9,7 @@
     import PotionContainer from "./potionContainer.svelte";
     import Receipt from "./receipt.svelte";
     import Result from "./result.svelte";
+    import SlidingMenu from "./shared/slidingMenu.svelte";
 
     let base: PotionBase;
 </script>
@@ -16,23 +17,23 @@
 <h1>Добро пожаловать в алхимическую лабораторию имени Котофойника</h1>
 
 <div class="modal-body row">
-    <div class="col-md-5">
+    <div class="col-md-auto">
         <ContainerSelector />
         <BaseSelector bind:base />
         <PotionContainer />
         <Receipt />
         <Formula />
     </div>
-    <div class="col-md-5">
+    <div class="col-md-auto">
         <Result />
     </div>
-    <div class="col-md-2">
-        <Legend />
+    <div class="col-md-auto">
+        <SlidingMenu component={Legend} text='Элементы' />
+        <SlidingMenu component={IngredientList} text='Ингредиенты' />
     </div>
 </div>
 <div class="modal-body row">
     <div class="col-md-5">
         <RecieptHelper />
-        <IngredientList />
     </div>
 </div>

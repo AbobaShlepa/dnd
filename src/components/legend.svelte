@@ -8,4 +8,4 @@
     }
 </script>
 
-<Table header={header} data={$elementStore.list} />
+<Table header={header} data={$elementStore.list} dark={true} />

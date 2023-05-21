@@ -3,6 +3,7 @@
     export let data: object[] = [];
     export let styles: string[] = [];
     export let selector = (item: any): any => item;
+    export let dark = false;
 
     const getStyle = (index: number) => {
         if (styles.length < index) {
@@ -14,7 +15,7 @@
 </script>
 
 {#if header && data}
-    <table class="table table-hover table-fit">
+    <table class="table table-hover table-fit {dark ? 'table-dark' : ''}">
         <thead class="thead-dark">
             {#each Object.values(header) as value}
                 <th>{value}</th>
