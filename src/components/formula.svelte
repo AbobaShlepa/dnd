@@ -19,4 +19,10 @@
 </script>
 
 <h6>Алхимическая формула</h6>
-<input type="text" value={formula} on:input={handle} on:keypress={validate}>
+<input type="text" value={formula} on:input={handle} on:keypress={validate} maxlength="6">
+
+<style>
+    input {
+        border-radius: 50px;
+    }
+</style>
