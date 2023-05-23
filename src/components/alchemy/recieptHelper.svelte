@@ -1,47 +1,40 @@
 <script lang="ts">
-  import { calculate } from "../../services/alchemy/recieptFactory";
+  import {
+    getSuggestions,
+    type Suggestion,
+  } from "../../services/alchemy/ingredientHelper";
   import { elementStore } from "../../stores/elementStore";
-  import { ingredientStore as store } from "../../stores/ingredientStore";
-  import type { Ingredient } from "../../types/alchemy/ingredient";
-    import { AlchemicState } from "../../types/elements/alchemicState";
   import Table from "../table.svelte";
 
-  const groupBy = <T>(
-    array: T[],
-    predicate: (value: T, index: number, array: T[]) => string
-  ) =>
-    array.reduce((acc, value, index, array) => {
-      (acc[predicate(value, index, array)] ||= []).push(value);
-      return acc;
-    }, {} as { [key: string]: T[] });
+  function mapData(items: Suggestion[]): object[] {
+    const result = [];
+    const allItems = items.map((x) => x.items);
+    const lengths = allItems.map((x) => x.length);
+    const maxLength = Math.max(...lengths);
 
-  function display(item: Ingredient): string {
-    return item.name;
+    for (let i = 0; i < maxLength; i++) {
+      const values = allItems.map((x) => x[i]?.name ?? "");
+      const object = values.reduce(
+        (obj, key, index) => ({ ...obj, [index]: key }),
+        {}
+      );
+
+      result.push(object);
+    }
+
+    return result;
   }
 
-  function getKeyName(state: AlchemicState): string {
-    if (state & AlchemicState.Nigredo) {
-      return 'Нигредо'
-    }
-    else if (state & AlchemicState.Rubedo) {
-      return 'Рубедо'
-    }
-    else if (state & AlchemicState.Albedo) {
-      return 'Альбедо'
-    }
-
-    return '';
-  }
-
-  $: reciept = $store && [...calculate($elementStore.elements, null)];
-  $: grouped = groupBy(reciept, (x) => x[0].state.toString());
-  $: header = $elementStore.elements.map((x) => x.name);
+  $: suggestionResult = getSuggestions($elementStore.elements);
 </script>
 
 {#if $elementStore.elements.length > 1}
   <p>Возможные рецепты:</p>
-  {#each Object.keys(grouped) as key}
-    {getKeyName(key)}
-    <Table {header} data={grouped[key]} selector={display} />
+  {#each Object.keys(suggestionResult) as key}
+    <Table
+      header={suggestionResult[key].map((x) => x.element.name)}
+      data={mapData(suggestionResult[key])}
+      caption={key}
+    />
   {/each}
 {/if}
