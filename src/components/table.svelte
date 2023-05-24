@@ -4,7 +4,8 @@
   export let styles: string[] = [];
   export let selector = (item: any): any => item;
   export let dark = false;
-  export let caption: string = null;
+  export let caption: string | null = null;
+  export let small = false;
 
   const getStyle = (index: number) => {
     if (styles.length < index) {
@@ -16,7 +17,7 @@
 </script>
 
 {#if header && data}
-  <table class="table table-hover table-fit {dark ? 'table-dark' : ''}">
+  <table class="{small ? 'table-sm' : 'table'} table-hover table-fit {dark ? 'table-dark' : ''}">
     {#if caption}
       <caption>{caption}</caption>
     {/if}

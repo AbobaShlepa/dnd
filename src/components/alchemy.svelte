@@ -16,7 +16,7 @@
 
 <h1>Добро пожаловать в алхимическую лабораторию имени Котофойника</h1>
 
-<div class="modal-body row">
+<!-- <div class="modal-body row">
   <div class="col-md-auto">
     <ContainerSelector />
     <BaseSelector bind:base />
@@ -38,4 +38,25 @@
   <div class="col">
     <Formula />
   </div>
+</div> -->
+
+<div class="row">
+  <div class="col centered">
+    <Formula />
+  </div>
 </div>
+
+<div class="row">
+  <div class="col-md-4">
+    <Result />
+  </div>
+  <div class="col-md-8">
+    <RecieptHelper />
+  </div>
+</div>
+
+<style>
+  .centered {
+    text-align: center;
+  }
+</style>
