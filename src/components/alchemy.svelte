@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Carousel from "svelte-carousel";
   import type { PotionBase } from "../types/potionBase";
   import IngredientList from "./alchemy/ingredientList.svelte";
   import RecieptHelper from "./alchemy/recieptHelper.svelte";
@@ -10,6 +11,7 @@
   import Receipt from "./receipt.svelte";
   import Result from "./result.svelte";
   import SlidingMenu from "./shared/slidingMenu.svelte";
+  import { elementStore } from "../stores/elementStore";
 
   let base: PotionBase;
 </script>
@@ -46,14 +48,21 @@
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-4">
     <Result />
   </div>
   <div class="col-md-8">
     <RecieptHelper />
   </div>
-</div>
+</div> -->
+
+{#if $elementStore.elements.length > 1}
+  <Carousel>
+    <Result />
+    <RecieptHelper />
+  </Carousel>
+{/if}
 
 <style>
   .centered {

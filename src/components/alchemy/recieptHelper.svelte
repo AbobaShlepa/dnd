@@ -29,7 +29,6 @@
 </script>
 
 {#if $elementStore.elements.length > 1}
-  <p>Возможные рецепты:</p>
   {#each Object.keys(suggestionResult) as key}
     <Table
       header={suggestionResult[key].map((x) => x.element.name)}
