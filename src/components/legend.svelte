@@ -25,7 +25,7 @@
   .dropdown {
     position: absolute;
     display: inline-block;
-    top: 60px;
+    top: 50px;
     right: 100px;
   }
 
@@ -62,6 +62,6 @@
     flex: 1;
     width: 100px;
     height: 25px;
-    margin: 20px;
+    margin: 15px;
   }
 </style>

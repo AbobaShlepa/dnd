@@ -6,7 +6,8 @@
   import { elementStore } from "../stores/elementStore";
 </script>
 
-<h1 class="centered">Алхимическая лаборатория имени Котофойника</h1>
+<h1 class="centered">Алхимическая лаборатория</h1>
+<h2 class="centered">имени Котофойника</h2>
 <div class="row">
   <div class="col centered mb-5">
     <Formula />
@@ -19,3 +20,9 @@
     <RecieptHelper />
   </Carousel>
 {/if}
+
+<style>
+  h1.centered {
+    margin-top: -40px;
+  }
+</style>
