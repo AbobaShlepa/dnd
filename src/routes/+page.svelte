@@ -1,24 +1,10 @@
+<script>
+  import Logo from "../components/shared/logo.svelte";
+</script>
+
 <header class="site-header sticky-top py-1">
   <nav class="container d-flex flex-column flex-md-row justify-content-between">
-    <a class="py-2" href="#" aria-label="Product">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        class="d-block mx-auto"
-        role="img"
-        viewBox="0 0 24 24">
-        <title>Product</title>
-        <circle cx="12" cy="12" r="10" />
-        <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-      </svg
-      >
-    </a>
+    <a class="py-2" href="#" aria-label="Product"><Logo /></a>
     <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
@@ -38,38 +24,46 @@
       <p class="lead fw-normal">
         Здесь я буду выкладывать свои проекты для DnD и не только
       </p>
-      <a class="btn btn-outline-secondary" href="#">Эта кнопка ничего не делает</a>
+      <a class="btn btn-outline-secondary" href="#"
+        >Эта кнопка ничего не делает</a
+      >
     </div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block" />
   </div>
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div
+      class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"
+    >
       <div class="my-3 py-3">
         <h2 class="display-5">Психея</h2>
         <p class="lead">Алхимия</p>
       </div>
       <a href="./alchemy">
-      <img
-        class="bg-light shadow-sm mx-auto"
-        src="./alchemy.jpg"
-        alt="Конвертер валют"
-        style="height: 300px; border-radius: 21px 21px 0 0;" />
+        <img
+          class="bg-light shadow-sm mx-auto"
+          src="./alchemy.jpg"
+          alt="Конвертер валют"
+          style="height: 300px; border-radius: 21px 21px 0 0;"
+        />
       </a>
     </div>
     <div
-      class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+    >
       <div class="my-3 p-3">
         <h2 class="display-5">Психея</h2>
         <p class="lead">Конвертер валют.</p>
       </div>
       <a href="./converter">
-      <img
-        class="bg-dark shadow-sm mx-auto"
-        src="./converter.jpg"
-        alt="Алхимия"
-        style="height: 300px; border-radius: 21px 21px 0 0;" />
+        <img
+          class="bg-dark shadow-sm mx-auto"
+          src="./converter.jpg"
+          alt="Алхимия"
+          style="height: 300px; border-radius: 21px 21px 0 0;"
+        />
       </a>
+    </div>
   </div>
 </main>
 
@@ -134,74 +128,3 @@
     </div>
   </div>
 </footer>
-
-<style>
-  .container {
-    max-width: 960px;
-  }
-
-  /*
- * Custom translucent site header
- */
-
-  .site-header {
-    background-color: rgba(0, 0, 0, 0.85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-  }
-  .site-header a {
-    color: #8e8e8e;
-    transition: color 0.15s ease-in-out;
-  }
-  .site-header a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  /*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
-  .product-device {
-    position: absolute;
-    right: 10%;
-    bottom: -30%;
-    width: 300px;
-    height: 540px;
-    background-color: #333;
-    border-radius: 21px;
-    transform: rotate(30deg);
-  }
-
-  .product-device::before {
-    position: absolute;
-    top: 10%;
-    right: 10px;
-    bottom: 10%;
-    left: 10px;
-    content: "";
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-  }
-
-  .product-device-2 {
-    top: -25%;
-    right: auto;
-    bottom: 0;
-    left: 5%;
-    background-color: #e5e5e5;
-  }
-
-  /*
- * Extra utilities
- */
-
-  .flex-equal > * {
-    flex: 1;
-  }
-  @media (min-width: 768px) {
-    .flex-md-equal > * {
-      flex: 1;
-    }
-  }
-</style>

@@ -1,27 +1,17 @@
-<div class="row bg-dark">
-  <div class="col centered">
-    <h1>Алхимическая лаборатория Котофойника</h1>
+<script>
+  import Logo from "../../components/shared/logo.svelte";
+</script>
+
+<header class="site-header sticky-top py-1">
+  <nav class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="#" aria-label="Product"><Logo /></a>
+    <a class="py-2 d-none d-md-inline-block" href="/alchemy">Главная</a>
+    <a class="py-2 d-none d-md-inline-block" href="/alchemy/ingredients">Ингредиенты</a>
+  </nav>
+</header>
+
+<main>
+  <div class="overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <slot />
   </div>
-</div>
-<div class="row">
-
-</div>
-
-<nav class="navbar bg-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a href="/alchemy">Главная</a>
-    </li>
-    <li class="nav-item">
-      <a href="/alchemy/ingredients">Ингредиенты</a>
-    </li>
-  </ul>
-</nav>
-
-<slot />
-
-<style>
-  .centered {
-    text-align: center;
-  }
-</style>
+</main>

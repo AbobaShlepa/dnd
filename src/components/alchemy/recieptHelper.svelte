@@ -30,10 +30,13 @@
 
 {#if $elementStore.elements.length > 1}
   {#each Object.keys(suggestionResult) as key}
-    <Table
-      header={suggestionResult[key].map((x) => x.element.name)}
-      data={mapData(suggestionResult[key])}
-      caption={key}
-    />
+    <div style="max-width: 80%;">
+      <Table
+        header={suggestionResult[key].map((x) => x.element.name)}
+        data={mapData(suggestionResult[key])}
+        caption={key}
+        small={true}
+      />
+    </div>
   {/each}
 {/if}
