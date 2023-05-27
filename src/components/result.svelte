@@ -11,7 +11,5 @@
 </script>
 
 {#if $store.effects.length > 0}
-  <div style="max-width: 80%;">
-    <Table {header} data={$store.effects} {styles} />
-  </div>
+  <Table {header} data={$store.effects} {styles} />
 {/if}
