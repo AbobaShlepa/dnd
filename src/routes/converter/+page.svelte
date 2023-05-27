@@ -37,7 +37,6 @@
     $: money && selectedCountry && calculateV2(money, selectedCountry.toString())
 
     function calculateV2(money: number, selected: string) {
-      console.log('triggered')
       const selectedRates = rates[selected];
 
       values = [];
@@ -56,8 +55,6 @@
       values.push(object);
     }
 </script>
-
-<h1>Конвертер валют Психеи v0.1</h1>
 <h3>Сколько получу в стране за эту деньгу</h3>
 
 <Table header={header} data={values}/>
@@ -68,3 +65,9 @@
   <br />
   <input min="0" max="10000000" bind:value="{money}"/>
 </div>
+
+<style>
+  h3 {
+    margin-top: -40px;
+  }
+</style>
